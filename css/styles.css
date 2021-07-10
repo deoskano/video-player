@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #43DDE6;  
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../img/Ellipse.png'), url('../img/Ellipse.png');
+    background-repeat: no-repeat;
+    background-position: left 70px top -340px, right 50px bottom -100px;
+}
+
+.wrapper{
+    max-width: 900px;
+    margin: auto;
+}
+
+.player{
+    position: relative;
+}
+
+.player video{
+    width: 100%;
+}
+
+.player__title{
+    margin: 0;
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    top: 20px;
+    left: 30px;
+}
+
+.player__actions{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.player__progress{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+}
+
+.player__progress input{
+    width: 100%;
+}
+
+.player__overlay{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.player:hover .player__overlay{
+    opacity: 1;
+    transition: .3s opacity;
+}
+
+.button{
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button:active{
+    transform: scale(.9);
+}
+
+#play{
+    background-image: url('../img/play.png');
+}
+
+#pause{
+    background-image: url('../img/pause.png');
+}
+
+#backward{
+    background-image: url('../img/backward.png');
+}
+
+#forward{
+    background-image: url('../img/forward.png');
+}
